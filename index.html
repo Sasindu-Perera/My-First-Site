@@ -1,1 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sasindu Perera — CS Student & Aspiring Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0F1115;
+    --surface:#171A21;
+    --surface-2:#1E222B;
+    --text:#E8E6E1;
+    --muted:#8B92A0;
+    --accent:#E8A33D;
+    --line:#2A2E38;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Inter',sans-serif;
+    line-height:1.6;
+  }
+  .wrap{max-width:760px;margin:0 auto;padding:0 24px;}
 
+  header{
+    padding:28px 0;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:1px solid var(--line);
+  }
+  .logo{
+    font-family:'Space Grotesk',sans-serif;
+    font-weight:600;
+    font-size:18px;
+    letter-spacing:-0.02em;
+  }
+  nav a{
+    color:var(--muted);
+    text-decoration:none;
+    margin-left:28px;
+    font-size:14px;
+    transition:color .2s;
+  }
+  nav a:hover{color:var(--text);}
+
+  .hero{
+    padding:90px 0 70px;
+  }
+  .hero .kicker{
+    color:var(--accent);
+    font-size:15px;
+    font-weight:500;
+    margin-bottom:18px;
+  }
+  .hero h1{
+    font-family:'Space Grotesk',sans-serif;
+    font-weight:700;
+    font-size:clamp(34px,6vw,52px);
+    line-height:1.15;
+    letter-spacing:-0.02em;
+    max-width:14ch;
+  }
+  .hero p{
+    color:var(--muted);
+    font-size:17px;
+    max-width:46ch;
+    margin-top:22px;
+  }
+  .hero .cta-row{
+    margin-top:34px;
+    display:flex;
+    gap:14px;
+  }
+  .btn{
+    display:inline-block;
+    padding:11px 20px;
+    border-radius:6px;
+    font-size:14px;
+    font-weight:500;
+    text-decoration:none;
+    transition:opacity .2s;
+  }
+  .btn-primary{background:var(--accent);color:#191305;}
+  .btn-ghost{border:1px solid var(--line);color:var(--text);}
+  .btn:hover{opacity:0.85;}
+
+  section{padding:60px 0;border-top:1px solid var(--line);}
+  h2{
+    font-family:'Space Grotesk',sans-serif;
+    font-size:22px;
+    font-weight:600;
+    margin-bottom:24px;
+  }
+
+  .about p{color:var(--muted);max-width:60ch;margin-bottom:14px;}
+  .about strong{color:var(--text);font-weight:500;}
+
+  .skills-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+    gap:12px;
+  }
+  .skill{
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:8px;
+    padding:14px 16px;
+    font-size:14px;
+  }
+  .skill .level{color:var(--muted);font-size:12px;margin-top:4px;}
+
+  .project{
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:10px;
+    padding:22px 24px;
+    margin-bottom:16px;
+  }
+  .project h3{
+    font-family:'Space Grotesk',sans-serif;
+    font-size:17px;
+    font-weight:600;
+    margin-bottom:6px;
+  }
+  .project p{color:var(--muted);font-size:14px;margin-bottom:12px;}
+  .project a{color:var(--accent);font-size:13px;text-decoration:none;}
+  .project a:hover{text-decoration:underline;}
+  .status{
+    display:inline-block;
+    font-size:11px;
+    color:var(--muted);
+    border:1px solid var(--line);
+    border-radius:20px;
+    padding:3px 10px;
+    margin-bottom:10px;
+  }
+
+  footer{
+    padding:50px 0 70px;
+    border-top:1px solid var(--line);
+  }
+  footer p{color:var(--muted);font-size:14px;}
+  .contact-links{margin-top:16px;display:flex;gap:20px;}
+  .contact-links a{color:var(--text);font-size:14px;text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:2px;}
+  .contact-links a:hover{border-color:var(--accent);color:var(--accent);}
+
+  @media (max-width:600px){
+    nav a{margin-left:16px;font-size:13px;}
+    .hero{padding:60px 0 50px;}
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <div class="logo">Sasindu Perera</div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="kicker">Computer Science applicant</div>
+    <h1>Building things, one line of code at a time.</h1>
+    <p>I'm a student applying for a Computer Science degree, currently learning web development and building real projects along the way. This site is one of them.</p>
+    <div class="cta-row">
+      <a href="#projects" class="btn btn-primary">See my projects</a>
+      <a href="#contact" class="btn btn-ghost">Get in touch</a>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About</h2>
+    <div class="about">
+      <p>I'm applying for an <strong>IT-related degree</strong>, with Computer Science as my first choice. Alongside my studies, I'm teaching myself web development so I can build a portfolio of real, working projects — not just coursework.</p>
+      <p>My goal is to combine my degree with practical experience: writing code that solves real problems, working with real (even if small) clients, and eventually taking on freelance work while I study.</p>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Currently learning</h2>
+    <div class="skills-grid">
+      <div class="skill">HTML & CSS<div class="level">Building confidence</div></div>
+      <div class="skill">JavaScript<div class="level">Just started</div></div>
+      <div class="skill">Git & GitHub<div class="level">First repo up</div></div>
+      <div class="skill">Problem Solving<div class="level">Daily practice</div></div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project">
+      <span class="status">In progress</span>
+      <h3>My First Site</h3>
+      <p>This very website — my first project built and deployed with HTML, CSS and GitHub Pages. A starting point for everything I build next.</p>
+      <a href="https://github.com/Sasindu-Perera/My-First-Site" target="_blank" rel="noopener">View on GitHub →</a>
+    </div>
+    <div class="project">
+      <span class="status">Coming soon</span>
+      <h3>Next project</h3>
+      <p>More projects will be added here as I build them — small tools, client sites, and coursework I'm proud of.</p>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <h2>Get in touch</h2>
+    <p>Open to small freelance work, collaborations, or just a chat about tech.</p>
+    <div class="contact-links">
+      <a href="https://github.com/Sasindu-Perera" target="_blank" rel="noopener">GitHub</a>
+      <a href="mailto:your-email@example.com">Email</a>
+      <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </footer>
+</div>
+
+</body>
+</html>
